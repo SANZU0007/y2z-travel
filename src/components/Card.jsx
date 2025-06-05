@@ -39,7 +39,7 @@ const DraggableItineraryItem = ({ item, index, moveItem }) => {
     const updateSizeAndVisibility = () => {
       if (window.innerWidth >= 640) {
         setSize({ width: 110, height: 110 });
-       
+      
         setShowBigScreenEdit(true);
       } else {
 
@@ -218,12 +218,12 @@ const DraggableItineraryItem = ({ item, index, moveItem }) => {
 
 // Main component
 const ItineraryCard = () => {
-  const [maxHeight, setMaxHeight] = useState(window.innerHeight * 0.78);
+  const [maxHeight, setMaxHeight] = useState(window.innerHeight * 0.76);
   const [items, setItems] = useState(itineraryData);
 
   useEffect(() => {
     const handleResize = () => {
-      setMaxHeight(window.innerHeight * 0.78);
+      setMaxHeight(window.innerHeight * 0.76);
     };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
